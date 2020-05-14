@@ -1,0 +1,130 @@
+﻿
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+
+html, body {
+    width: 800px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.clear-fix:after {
+    width: 100%;
+    content: ' ';
+    display: block;
+    clear: both;
+}
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: #026b97;
+}
+
+    .header .header-left {
+        height: 100%;
+        width: 30px;
+        float: left;
+        text-align: center;
+        line-height: 60px;
+        margin-left: 20px;
+    }
+
+.header-left > span {
+    font-size: 20px;
+    color: #fff;
+}
+
+.header .menu-header-right {
+    height: 100%;
+    width: 210px;
+    float: right;
+    display: flex;
+}
+
+.menu-header-right-item {
+    height: 100%;
+    line-height: 60px;
+    width: 70px;
+    text-align: center;
+}
+
+    .menu-header-right-item > span {
+        color: #fff;
+        font-size: 20px;
+    }
+.title-exam {
+    position: absolute;
+    width: 100%;
+    top: 60px;
+    left: 0;
+    height: 80px;
+    line-height: 80px;
+    font-size: 26px;
+    color: #026b97;
+    text-align: center;
+}
+.space {
+    position: absolute;
+    top: 130px;
+    height: 2px;
+    width: 100px;
+    left: calc(50% - 50px);
+    background: #026b97;
+}
+.content-exam {
+    position: absolute;
+    top: 140px;
+    display: flex;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #f7f9f9;
+}
+    .content-exam .list-icon-question {
+        width: 260px;
+        height: 100%;
+        border-right: 1px solid #d1dbf7;
+    }
+        .list-icon-question .row {
+            width: 100%;
+            height: 50px;
+            margin: 10px 0px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+            div.row > button {
+                display: inline-block;
+                height: 35px;
+                width: 35px;
+                border-radius: 5px;
+                background: #d1dbf7;
+                border: none;
+                box-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+                margin: 0px 5px;
+                cursor: pointer;
+            }
+             div.row > button:focus {
+                 background: #f9ac3e;
+                 outline: none;
+             }
+    .content-exam .list-question {
+        flex-grow: 1;
+        height: 100%;
+        overflow: auto;
+    }
+        .list-question .question {
+            height: 250px !important;
+            width: 100%;
+            margin: 5px 0;
+            display: flex;
+        }

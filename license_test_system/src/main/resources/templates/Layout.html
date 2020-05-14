@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto:400,500,700&display=swap" rel="stylesheet">
+    <link href="/CSS/Layout.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+    <link href="/CSS/modal.css" rel="stylesheet" />
+    <title>Trang chủ</title>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo"></div>
+        <div class="menu">
+            <div class="menu-item dash-broad">
+                <a href="Layout.html">
+                    <span class="fa fa-home"></span>
+                    Trang chủ
+                </a>
+            </div>
+            <div class="menu-item Users">
+                <a href="UsersData.html">
+                    <span class="fa fa-user"></span>
+                    Học viên
+                </a>
+            </div>
+            <div class="menu-item Courses">
+                <a href="Courses.html">
+                    <span class="fa fa-book"></span>
+                    Khóa học
+                </a>
+            </div>
+            <div class="menu-item Users">
+                <a href="history.html">
+                    <span class="fa fa-history"></span>
+                    Lịch sử
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="header clear-fix">
+        <div class="header-left">
+            <span class="fa fa-align-justify"></span>
+        </div>
+        <div class="menu-header-right">
+            <div class="menu-header-right-item message">
+                <span class="fa fa-envelope"></span>
+            </div>
+            <div class="menu-header-right-item notification">
+                <span class="fa fa-bell"></span>
+                <span class="notifi">1</span>
+            </div>
+            <div class="menu-header-right-item account">
+                <span class="fa fa-user"></span>
+                <ul class="dropdownd-user">
+                    <li>
+                        <span class="fa fa-user"></span>
+                        <ul class="option-acc">
+                            <li><a href="Signin.html">Đăng xuất</a></li>
+                            <li><a href="#">Chỉnh sửa</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="categories">
+            <div class="categories-item total-courses">
+                <span class="categories-item-text">
+                    <b>2096</b>
+                    <p>Tổng số khóa học</p>
+                </span>
+                <span class="categories-item-icon fa fa-book"></span>
+            </div>
+            <div class="categories-item onlining">
+                <span class="categories-item-text">
+                    <b>2096</b>
+                    <p>Đang trực tuyến</p>
+                </span>
+                <span class="categories-item-icon fa fa-globe"></span>
+            </div>
+            <div class="categories-item total-expert">
+                <span class="categories-item-text">
+                    <b>2096</b>
+                    <p>Tổng số chuyên viên</p>
+                </span>
+                <span class="categories-item-icon fa fa-users"></span>
+                <link href="../CSS/Layout.css" rel="stylesheet" />
+            </div>
+            <div class="categories-item total-user">
+                <span class="categories-item-text">
+                    <b>2096</b>
+                    <p>Tổng số học viên</p>
+                </span>
+                <span class="categories-item-icon fa fa-users"></span>
+            </div>
+        </div>
+        <div class="statistical">
+            <div class="statistical-item title-chart">Biểu đồ điểm thi</div>
+            <div class="statistical-item title-ratio-pass">Tỉ lệ đỗ/trượt</div>
+        </div>
+        <div class="chart">
+            <div class="chart-item chart-point">
+                <canvas id="chart-point-exam"></canvas>
+            </div>
+            <div class="chart-item chart-pass">
+                <canvas id="chart-pass-fail"></canvas>
+            </div>
+        </div>
+    </div> 
+    <div class="list-notifi">
+        <div class="title-notifi">
+            Thông báo
+        </div>
+        <div class="content-notifi">
+            <div class="notifi-item">
+                <a href="listExam.html">Bạn có một kì thi lái xe hạng A1 sắp tới ngày 20/10</a>
+            </div>
+        </div>
+    </div>
+    <script src="/JS/jquery-3.4.1.min.js"></script>
+    <script src="/JS/Base.js"></script>
+    <script src="/JS/Layout.js"></script>
+</body>
+</html>

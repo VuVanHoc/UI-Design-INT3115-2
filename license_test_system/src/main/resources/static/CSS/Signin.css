@@ -1,0 +1,147 @@
+﻿body {
+    font-family: Roboto;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Roboto;
+}
+
+ul, li {
+    list-style: none;  
+}
+a {
+    text-decoration: none;
+}
+#header {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    width: 100%;
+    border-bottom: 1px solid #9e9c9c;
+    background: #026b97;
+}
+#header #logo {
+    width: 160px;
+    height: 100%;
+    background : url('../Content/Images/logo.png') no-repeat center center;
+    background-size: 130px;
+}
+#header #menu {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    right: 0;
+    width: 500px;
+    padding: 22px 0px;
+}
+#menu a {
+    color: #fff;
+    font-weight: 500;
+    font-size: 20px;
+    display: inline-block;
+    height: 35px;
+    width: 160px;
+    text-align: center;
+    line-height: 35px;
+    border-right: 1px solid #fff;
+    text-decoration: none;
+}
+#menu a.contact {
+    border-right: none;
+}
+body #form {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    height: calc(100% - 80px);
+    background: #fff;
+}
+#form #form-content {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 500px;
+    padding: 100px 30px;
+}
+#form-content form {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.signin-title {
+    font-weight: 500;
+    font-size: 28px;
+    color: #026b97;
+    text-align: center;
+    text-transform: uppercase;
+}
+form > span, form > input, form > a, form > button {
+    display: inline-block;
+    position: absolute;
+    outline: none;
+}
+form > span {
+    color: #717070;
+    font-size: 18px;
+}
+.username {
+    top: 60px;
+    left: 15px;
+}
+.password {
+    top: 118px;
+    left: 18px;
+}
+form > input {
+    border: 1px solid #ccc;
+    width: 250px;
+    height: 30px;
+    border-radius: 3px;
+    padding: 8px;
+}
+form > input[name="username"] {
+    left: 165px;
+    top: 60px;
+}
+form > input[name="password"] {
+    left: 165px;
+    top: 118px;
+}
+.forgot-password {
+    font-size: 18px;
+    top: 180px;
+    left: 18px;
+    color: #808080;
+    cursor: pointer;
+}
+.forgot-password:hover {
+    color: #545151;
+}
+button[name="signin"] {
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: #ebebeb;
+    top: 230px;
+    left: 165px;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+    button[name="signin"] > a {
+        color: gray;
+    }
+    button[name="signin"]:hover {
+        background: #bdbaba;
+    }

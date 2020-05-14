@@ -1,7 +1,8 @@
 package com.uet.int3315.nhom8.license_test_system.service;
 
-import com.uet.k62.web.system.examination.model.RestBody;
-import com.uet.k62.web.system.examination.model.dtos.QuestionRequestDTO;
+
+import com.uet.int3315.nhom8.license_test_system.model.RestBody;
+import com.uet.int3315.nhom8.license_test_system.model.dtos.QuestionRequestDTO;
 
 public interface QuestionService {
     RestBody createQuestion(QuestionRequestDTO dto);
