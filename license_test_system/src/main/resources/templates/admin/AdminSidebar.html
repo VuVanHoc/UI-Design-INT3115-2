@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8">
+<title>Sidebar</title>
+</head>
+<body>
+<div th:fragment="adminSidebar" class="sidebar">
+	<div class="logo"></div>
+	<div class="menu">
+		<div class="menu-item dash-broad">
+			<a href="/admin/dashboard">
+				<span class="fa fa-home"></span>
+				Dashboard
+			</a>
+		</div>
+		<div class="menu-item Users">
+			<a href="/admin/manage-user">
+				<span class="fa fa-users"></span>
+				Học viên
+			</a>
+		</div>
+		<div class="menu-item Courses">
+			<a href="/admin/courses">
+				<span class="fa fa-address-book"></span>
+				Khóa học
+			</a>
+		</div>
+		<div class="menu-item Courses">
+			<a href="/admin/questions">
+				<span class="fa fa-book"></span>
+				Bộ câu hỏi
+			</a>
+		</div>
+		<div class="menu-item Users">
+			<a href="/admin/history">
+				<span class="fa fa-history"></span>
+				Lịch sử thi
+			</a>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto:400,500,700&display=swap"
+          rel="stylesheet">
+    <link th:href="@{~/CSS/Layout.css}" rel="stylesheet"/>
+    <link th:href="@{~/CSS/StudentCourses.css}" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Khóa học</title>
+</head>
+<body>
+<div th:insert="header::header">
+</div>
+<div th:insert="student/sidebar::sidebar">
+</div>
+
+<div class="content">
+    <div class="content-wrap">
+        <div class="list-courses-title clear-fix">
+            <div class="main-title">Khóa học</div>
+        </div>
+        <div class="search">
+            <input id="mySearch" class="inp-search" type="text" placeholder="Search"/>
+            <button class="btn-search"></button>
+        </div>
+        <div class="table-list-courses">
+            <table class="list-courses">
+                <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Tên khóa học</th>
+                    <th>Hạng </th>
+                    <th>Mô tả</th>
+                    <th>Tổng số câu hỏi</th>
+                    <th>Mức điểm tối thiểu</th>
+                    <th>Kỳ thi</th>
+                </tr>
+                </thead>
+                <tbody id="myTable">
+                </tbody>
+            </table>
+        </div>
+        <div class="paging-data">
+            <div class="paging-left">
+                <div class="page-first fa fa-angle-double-left"></div>
+                <div class="page-prev fa fa-angle-left"></div>
+                <div class="page-next fa fa-angle-right"></div>
+                <div class="page-last fa fa-angle-double-right"></div>
+            </div>
+            <div class="paging-right">
+                Hiển thị <span id="startRow">1</span> - <span id="endRow"></span> trên <span id="totalRows"></span> kết
+                quả
+            </div>
+        </div>
+    </div>
+</div>
+<script th:src="@{~/JS/jquery-3.4.1.min.js}"></script>
+<!--<script th:src="@{~/Bootstrap/bootstrap.js"></script>-->
+<script th:src="@{~/JS/Layout.js}"></script>
+<script th:src="@{~/JS/student/courses.js}"></script>
+</body>
+</html>

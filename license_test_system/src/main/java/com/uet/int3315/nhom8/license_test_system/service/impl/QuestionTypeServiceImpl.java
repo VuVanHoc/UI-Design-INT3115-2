@@ -1,11 +1,12 @@
 package com.uet.int3315.nhom8.license_test_system.service.impl;
 
-import com.uet.k62.web.system.examination.error.QuestionTypeNotFoundException;
-import com.uet.k62.web.system.examination.model.RestBody;
-import com.uet.k62.web.system.examination.model.dtos.QuestionTypeDTO;
-import com.uet.k62.web.system.examination.model.entity.QuestionType;
-import com.uet.k62.web.system.examination.repository.QuestionTypeRepository;
-import com.uet.k62.web.system.examination.service.QuestionTypeService;
+
+import com.uet.int3315.nhom8.license_test_system.error.QuestionTypeNotFoundException;
+import com.uet.int3315.nhom8.license_test_system.model.RestBody;
+import com.uet.int3315.nhom8.license_test_system.model.dtos.QuestionTypeDTO;
+import com.uet.int3315.nhom8.license_test_system.model.entity.QuestionType;
+import com.uet.int3315.nhom8.license_test_system.repository.QuestionTypeRepository;
+import com.uet.int3315.nhom8.license_test_system.service.QuestionTypeService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 

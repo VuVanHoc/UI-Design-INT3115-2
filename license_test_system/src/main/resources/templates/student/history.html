@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <link href="/CSS/history.css" rel="stylesheet"/>
+    <link href="/CSS/Layout.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto:400,500,700&display=swap" rel="stylesheet">
+    <title>Lịch sử thi</title>
+</head>
+<body>
+<div th:replace="/header :: header"></div>
+<div th:replace="/student/sidebar :: sidebar"></div>
+<div class="content-history">
+    <div class="title-history">
+        LỊCH SỬ THI
+    </div>
+    <div class="space"></div>
+    <div class="history">
+        <table class="list-users">
+            <thead>
+            <tr>
+                <th>STT</th>
+                <th>Khoá học</th>
+                <!--<th>Họ và tên</th>-->
+                <!--<th>Tài khoản</th>-->
+                <th>Số điểm</th>
+                <th>Trạng thái</th>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+</div>
+<script src="/JS/jquery-3.4.1.min.js"></script>
+<script src="/JS/Layout.js"></script>
+
+<script type="text/javascript" th:inline="javascript">
+    let user = getUser();
+    var objects = getData("/api/exam-result?userId=" + user.id);
+
+    // $('.list-users tbody').empty();
+    $.each(objects, function (index, item) {
+        let course = getCourse(item.courseId);
+
+        row = $('<tr></tr>');
+        row.append('<td>' + (index+1) + '</td>');
+        row.append('<td>' + course.courseName + '</td>');
+        // row.append('<td>' + user.fullName + '</td>');
+        // row.append('<td>' + user.username + '</td>');
+        if(item.status){
+            row.append('<td><span style="color: green">' + item.score + '</span></td>');
+            row.append('<td><span style="color: green">Đạt</span></td>');
+        }else {
+            row.append('<td><span style="color: red">' + item.score + '</span></td>');
+            row.append('<td><span style="color: red">Không đạt</span></td>');
+        }
+
+        $('.list-users tbody').append(row);
+    });
+
+    function getUser() {
+        return getData("/api/users/username/" + localStorage.getItem("username"));
+    }
+
+    function getCourse(courseId) {
+        return getData("/api/courses/" + courseId);
+    }
+
+    function getData(url) {
+        var arrayData = [];
+        $.ajax({
+            method: "GET",
+            url: url,
+            async: false,
+            dataType: "json",
+            success: function (res) {
+                arrayData = res.data;
+            },
+            error: function () {
+                alert("Lỗi tải dữ liệu");
+            }
+        });
+        return arrayData;
+    }
+</script>
+</body>
+</html>

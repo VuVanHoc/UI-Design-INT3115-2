@@ -1,10 +1,11 @@
 package com.uet.int3315.nhom8.license_test_system.restcontroller;
 
-import com.uet.k62.web.system.examination.config.JwtTokenProvider;
-import com.uet.k62.web.system.examination.model.dtos.JwtAuthenticationResponse;
-import com.uet.k62.web.system.examination.model.dtos.LoginRequest;
-import com.uet.k62.web.system.examination.model.entity.CustomUserDetail;
-import com.uet.k62.web.system.examination.repository.UserRepository;
+
+import com.uet.int3315.nhom8.license_test_system.config.JwtTokenProvider;
+import com.uet.int3315.nhom8.license_test_system.model.dtos.JwtAuthenticationResponse;
+import com.uet.int3315.nhom8.license_test_system.model.dtos.LoginRequest;
+import com.uet.int3315.nhom8.license_test_system.model.entity.CustomUserDetail;
+import com.uet.int3315.nhom8.license_test_system.repository.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;

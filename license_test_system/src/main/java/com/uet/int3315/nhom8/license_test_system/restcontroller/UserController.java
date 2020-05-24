@@ -1,9 +1,10 @@
 package com.uet.int3315.nhom8.license_test_system.restcontroller;
 
-import com.uet.k62.web.system.examination.model.RestBody;
-import com.uet.k62.web.system.examination.model.dtos.UserDetailDTO;
-import com.uet.k62.web.system.examination.model.dtos.UserFormRegistrationDTO;
-import com.uet.k62.web.system.examination.service.UserService;
+
+import com.uet.int3315.nhom8.license_test_system.model.RestBody;
+import com.uet.int3315.nhom8.license_test_system.model.dtos.UserDetailDTO;
+import com.uet.int3315.nhom8.license_test_system.model.dtos.UserFormRegistrationDTO;
+import com.uet.int3315.nhom8.license_test_system.service.UserService;
 import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

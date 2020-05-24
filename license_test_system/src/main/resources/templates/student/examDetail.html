@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto:400,500,700&display=swap" rel="stylesheet">
+    <link th:href="@{~/CSS/Layout.css}" rel="stylesheet" />
+    <link th:href="@{~/CSS/ExamDetail.css}" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Khóa học</title>
+</head>
+<body>
+<div th:insert="header::header">
+</div>
+<div th:insert="student/sidebar::sidebar">
+</div>
+
+<div class="content">
+    <div class="content-wrap">
+        <div id="title">
+            <p>Thi sát hạch lí thuyết - <span id="courseName"></span></p></div>
+        <div id="description">
+            <p>Bài thi được mở vào lúc: <span id="startTime"></span></p>
+            <p>Bài thi được đóng vào lúc:  <span id="endTime"></span></p>
+            <p>Thời gian làm bài: <span id="examTime"></span></p>
+            <p><span id="note"></span></p>
+            <input id="courseId" type="hidden" th:value="${courseId}"/>
+        </div>
+        <div id="contructor">
+        </div>
+        <div id="btnExam">
+            <input id="examId" type="hidden"/>
+            <input class="btn" type="button" value="Bắt đầu thi" onclick="loadExam();"/>
+        </div>
+    </div>
+</div>
+<script th:src="@{~/JS/jquery-3.4.1.min.js}"></script>
+<script th:src="@{~/JS/Layout.js}"></script>
+<script th:src="@{~/JS/student/examDetail.js}"></script>
+</body>
+</html>

@@ -8,7 +8,7 @@ public class StudentController {
 	
 	@GetMapping(value = {"/", "/login", "/logout"})
 	public String index() {
-		return "index";
+		return "Signin";
 	}
 	
 	@GetMapping(value = "/student/dashboard")

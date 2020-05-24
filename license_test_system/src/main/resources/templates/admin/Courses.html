@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto:400,500,700&display=swap" rel="stylesheet">
+<link href="/CSS/Layout.css" rel="stylesheet"/>
+<link href="/CSS/UsersData.css" rel="stylesheet"/>
+<link href="/CSS/modal.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>Admin - Quản lý khóa học</title>
+</head>
+<body>
+<div th:replace="/header :: header"></div>
+<div th:replace="/admin/AdminSidebar :: adminSidebar"></div>
+<div class="content">
+	<div class="content-wrap">
+		<div class="list-users-title clear-fix">
+			<div class="main-title">Danh sách khoá học</div>
+			<div class="search">
+				<input id="txtSearch"  class="inp-search" type="text" placeholder="Tìm kiếm"/>
+				<button class="btn-search"></button>
+				<button class="btn-add" id="btn-create-course"><span class="fa fa-plus"></span>Tạo khoá học </button>
+			</div>
+		</div>
+		<div class="table-list-users">
+			<table class="list-users">
+				<thead>
+					<tr>
+						<th fieldName="index">STT</th>
+						<th fieldName="courseName">Tên khoá học</th>
+						<th fieldName="typeName" style="width: 120px">Hạng giấy phép</th>
+						<th fieldName="total">Tổng số câu hỏi</th>
+						<th fieldName="minScore">Mức điểm tối thiểu</th>
+						<th fieldName="description">Mô tả </th>
+						<th fieldName="createdTime">Thời gian tạo</th>
+						<th>Đề thi</th>
+						<th style="width: 170px">Danh sách học viên</th>
+						<th style="width: 125px">Hành động</th>
+					</tr>
+				</thead>
+				<tbody id="myTable">
+				</tbody>
+				
+			</table>
+		</div>
+		<div class="paging-data">
+			<div class="paging-left">
+				<div class="page-first fa fa-angle-double-left"></div>
+				<div class="page-prev fa fa-angle-left"></div>
+				<div class="page-next fa fa-angle-right"></div>
+				<div class="page-last fa fa-angle-double-right"></div>
+			</div>
+			<div class="paging-right">
+				Hiển thị 1 - 10 trên 100 kết quả
+			</div>
+		</div>
+	</div>
+	
+	<!--form add new course-->
+	<div class="modal modal-add-course">
+		<div class="modal-content">
+			<div class="title-modal">
+				TẠO KHOÁ HỌC
+			</div>
+			<form method="post" action="javascript:void(0)" class="form-add-user">
+				<div class="form-item">
+					<div class="label">Nhập mã khoá học</div>
+					<input type="text" id="course-name-add" placeholder="Nhập mã khoá học của bạn">
+				</div>
+				<div class="form-item">
+					<div class="label">Mức độ</div>
+					<select id="type-id">
+						<!--<option value="2">Hạng B1</option>-->
+						<!--<option value="1">Hạng B2</option>-->
+					</select>
+				</div>
+
+				<div class="form-item">
+					<button class="btn-item update" id="btn-add-new-course">Tạo</button>
+					<button class="btn-item cancel">Huỷ</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	
+	<div class="modal modal-update-course">
+		<div class="modal-content">
+			<div class="title-modal">
+				CHỈNH SỬA THÔNG TIN KHOÁ HỌC
+			</div>
+			<form method="post" action="javascript:void(0)" class="form-add-user">
+				<input id="course-id" hidden>
+				<div class="form-item">
+					<div class="label">Nhập mã khoá học</div>
+					<input type="text" id="course-name-update" placeholder="Nhập mã khoá học của bạn">
+				</div>
+				<div class="form-item">
+					<div class="label">Mức độ</div>
+					<select id="type-id-update">
+						<!--<option value="2">Hạng B1</option>-->
+						<!--<option value="1">Hạng B2</option>-->
+					</select>
+				</div>
+				
+				<div class="form-item">
+					<button class="btn-item update" id="btn-update-course">Tạo</button>
+					<button class="btn-item cancel">Huỷ</button>
+				</div>
+			</form>
+		</div>
+	</div></div>
+<script src="/JS/jquery-3.4.1.min.js"></script>
+<script src="/JS/Layout.js"></script>
+<script src="/JS/admin/Course.js"></script>
+
+</body>
+</html> 

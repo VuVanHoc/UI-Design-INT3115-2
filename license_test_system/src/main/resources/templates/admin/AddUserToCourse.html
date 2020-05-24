@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto:400,500,700&display=swap" rel="stylesheet">
+<link href="/CSS/Layout.css" rel="stylesheet"/>
+<link href="/CSS/createdExam.css" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>Admin - Khoá học</title>
+</head>
+<body>
+<div th:replace="/header :: header"></div>
+<div th:replace="/admin/AdminSidebar :: adminSidebar"></div>
+<div class="content">
+	<div class="content-wrap">
+		<div class="list-users-title">
+			<p class="main-title">Thêm học viên</p>
+		</div>
+		<input id="courseId" type="hidden">
+		<div class="exam-schedule">
+			<div class="column left" style="background-color:#e0e0e0;">
+				<p class="column-title">Thông tin khoá học</p>
+				<div class="column-content">
+					<label for="startTime">Mã khoá học</label>
+					<input type="text" name="startTime" id="startTime" th:value="${course.courseName}" disabled required>
+					<!--<label for="endTime">Hạng giấy phép</label>-->
+					<!--<input type="text" name="startTime" id="endTime" th:value="ABC" disabled required>-->
+					<!--<label for="note">Ghi chú</label>-->
+					<!--<input type="text" name="note" id="note" style="height: 50px" th:value="ABCS" disabled required>-->
+					<input type="hidden" id="timezone" name="timezone" value="-07:00">
+				</div>
+			</div>
+			<div class="column middle" style="background-color:#e0e0e0;">
+				<p class="column-title">Danh sách học viên trong hệ thống</p>
+				<div id="table1">
+					<table style="border-spacing: 0px; margin-top: 5px ">
+						<thead>
+							<tr>
+								<th>#</th>
+								<th>Họ tên</th>
+								<th>Email</th>
+								<th><input type="checkbox" id="checkbox-all-1" disabled></th>
+							</tr>
+						</thead>
+						<tbody  id="tb1">
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="column right" style="background-color:#e0e0e0;">
+				<p class="column-title">Danh sách trong khoá học <span id="number-question-added"></span></p>
+				<div id="table2">
+					<table style="border-spacing: 0px; margin-top: 5px ">
+						<thead>
+							<tr>
+								<th>#</th>
+								<th>Họ tên</th>
+								<th>Email</th>
+								<th><input type="checkbox" id="checkbox-all-2" disabled></th>
+							</tr>
+						</thead>
+						<tbody id="tb2">
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		
+		<div class="footer">
+			<button class="btn-footer btn-back">Quay lại</button>
+			<button class="btn-footer btn-save">Ghi nhận</button>
+		</div>
+	</div>
+</div>
+<script src="/JS/jquery-3.4.1.min.js"></script>
+<script src="/JS/Layout.js"></script>
+<script src="/JS/admin/AddUserToCourse.js"></script>
+</body>
+</html>

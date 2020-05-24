@@ -1,9 +1,10 @@
 package com.uet.int3315.nhom8.license_test_system.service.impl;
 
-import com.uet.k62.web.system.examination.model.entity.CustomUserDetail;
-import com.uet.k62.web.system.examination.model.entity.User;
-import com.uet.k62.web.system.examination.repository.RoleRepository;
-import com.uet.k62.web.system.examination.repository.UserRepository;
+
+import com.uet.int3315.nhom8.license_test_system.model.entity.CustomUserDetail;
+import com.uet.int3315.nhom8.license_test_system.model.entity.User;
+import com.uet.int3315.nhom8.license_test_system.repository.RoleRepository;
+import com.uet.int3315.nhom8.license_test_system.repository.UserRepository;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.userdetails.UserDetails;

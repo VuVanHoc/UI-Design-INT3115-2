@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto:400,500,700&display=swap" rel="stylesheet">
+    <link href="/CSS/Layout.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+    <link href="/CSS/modal.css" rel="stylesheet" />
+    <title>Trang chủ</title>
+</head>
+<body>
+	<div th:replace="/admin/AdminSidebar :: adminSidebar"></div>
+	<div th:replace="/header :: header"> </div>
+	<div class="content">
+        <div class="categories">
+            <div class="categories-item total-courses">
+                <span class="categories-item-text">
+                    <b id="totalCourse"></b>
+                    <p>Tổng số khóa học</p>
+                </span>
+                <span class="categories-item-icon fa fa-book"></span>
+            </div>
+            <div class="categories-item onlining">
+                <span class="categories-item-text">
+                    <b id="totalUser"></b>
+                    <p>Tổng số User</p>
+                </span>
+                <span class="categories-item-icon fa fa-globe"></span>
+            </div>
+            <div class="categories-item total-expert">
+                <span class="categories-item-text">
+                    <b id="totalAdmin"></b>
+                    <p>Tổng số chuyên viên</p>
+                </span>
+                <span class="categories-item-icon fa fa-users"></span>
+                <link href="../CSS/Layout.css" rel="stylesheet" />
+            </div>
+            <div class="categories-item total-user">
+                <span class="categories-item-text">
+                    <b id="totalStudent"></b>
+                    <p>Tổng số học viên</p>
+                </span>
+                <span class="categories-item-icon fa fa-users"></span>
+            </div>
+        </div>
+        <div class="statistical">
+            <div class="statistical-item title-chart">Biểu đồ điểm thi</div>
+            <div class="statistical-item title-ratio-pass">Tỉ lệ đỗ/trượt</div>
+        </div>
+        <div class="chart">
+            <div class="chart-item chart-point">
+                <canvas id="chart-point-exam"></canvas>
+            </div>
+            <div class="chart-item chart-pass">
+                <canvas id="chart-pass-fail"></canvas>
+            </div>
+        </div>
+    </div>
+	
+    <script src="/webjars/jquery/3.1.1/jquery.min.js"></script>
+    <script src="/JS/Layout.js"></script>
+	<script src="/JS/DrawChart.js"></script>
+</body>
+</html>

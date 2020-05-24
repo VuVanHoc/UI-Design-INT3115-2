@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto:400,500,700&display=swap" rel="stylesheet">
+<link href="/CSS/Layout.css" rel="stylesheet"/>
+<link href="/CSS/createdExam.css" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>Admin - Khoá học</title>
+<style>
+	table {
+		margin: auto;
+		width: 100%;
+	}
+	
+	h2 {
+		text-align: center;
+		text-transform: uppercase;
+		margin-top: 10px;
+		color: #026b97;
+	}
+	
+	.content-question {
+		width: 70%;
+		margin: auto auto 50px;
+	}
+	
+	.btn-table {
+		margin-top: 10px;
+		padding: 6px 12px;
+		border-radius: 5px;
+		border: none;
+		color: white;
+		font-weight: 500;
+		cursor: pointer;
+	}
+	input {
+		padding: 5px 10px;
+		width: 100%;
+	}
+	.detail {
+		width: 100%;
+		height: auto;
+		border: 1px solid #ccc;
+		padding: 5px;
+		border-radius: 5px;
+		font-size: 14px;
+		line-height: 22px;
+	}
+	input[type="checkbox"] {
+		cursor: pointer;
+		width: auto;
+	}
+</style>
+</head>
+<body>
+<div th:replace="/header :: header"></div>
+<div th:replace="/admin/AdminSidebar :: adminSidebar"></div>
+<div class="content">
+	<div class="content-question">
+		<h2>Xem chi tiết câu hỏi</h2>
+		<h3>Câu hỏi </h3>
+		<textarea style="height: 100px" class="detail" th:text="${question.content}"></textarea>
+		<!--<p ></p>-->
+		
+		<div th:if="${showImg}"><img th:src="'../../Images/'+${question.imageUrl}" width="600px" height="250px">
+		</div>
+		<br/>
+		<table>
+			<thead>
+				<tr>
+					<th style="width: 100px">Đáp án đúng</th>
+					<th>Nội dung đáp án</th>
+				
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="answer : ${answers}">
+					
+					<td th:if="${answer.status}">
+						<input type="checkbox" checked>
+					</td>
+					<td th:if="${!answer.status}"><input type="checkbox"></td>
+					<td ><textarea class="detail answer" th:text="${answer.content}"></textarea></td>
+				
+				</tr>
+			</tbody>
+		</table>
+		<button class="btn-table return" style="background-color: orange">
+			<span class="fa fa-chevron-circle-left"></span> Danh sách câu hỏi
+		</button>
+		<button class="btn-table update" style="background-color: #026b97">Cập nhật</button>
+	</div>
+
+</div>
+<script src="/JS/jquery-3.4.1.min.js"></script>
+<script src="/JS/Layout.js"></script>
+<script src="/JS/admin/AddUserToCourse.js"></script>
+<script>
+	$(document).ready(function () {
+		$('.return').click(function () {
+			window.location.href = "http://localhost:8080/admin/questions";
+		})
+		$('.update').click(function () {
+			alert("Cập nhật câu hỏi thành công!");
+			window.location.href = "http://localhost:8080/admin/questions";
+		})
+	})
+</script>
+</body>
+</html>

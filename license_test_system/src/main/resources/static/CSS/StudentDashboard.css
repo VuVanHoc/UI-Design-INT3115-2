@@ -1,0 +1,21 @@
+.dashboard{
+    position: absolute;
+    left: 172px;
+    right: 0;
+    top: 60px;
+    bottom: 0;
+    background: #fdfad6;
+}
+
+.welcome{
+    margin: 20px;
+    color: #026b97;
+}
+
+.schedule{
+    margin: 10px 20px;
+}
+
+.schedule a{
+    color: #026b97;
+}

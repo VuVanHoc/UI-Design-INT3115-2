@@ -27,7 +27,7 @@ a {
 #header #logo {
     width: 160px;
     height: 100%;
-    background : url('../Content/Images/logo.png') no-repeat center center;
+    background : url('../Images/logo.png') no-repeat center center;
     background-size: 130px;
 }
 #header #menu {
@@ -104,6 +104,8 @@ form > input {
     height: 30px;
     border-radius: 3px;
     padding: 8px;
+	font-size: 14px;
+
 }
 form > input[name="username"] {
     left: 165px;
@@ -114,14 +116,21 @@ form > input[name="password"] {
     top: 118px;
 }
 .forgot-password {
-    font-size: 18px;
+    font-size: 14px;
     top: 180px;
     left: 18px;
     color: #808080;
     cursor: pointer;
 }
 .forgot-password:hover {
-    color: #545151;
+    color: #0285bb;
+}
+#submit {
+	padding: 0 12px;
+	border: none;
+	background-color: #0062b5;
+	color: white;
+
 }
 button[name="signin"] {
     width: 100px;
@@ -129,7 +138,7 @@ button[name="signin"] {
     line-height: 40px;
     text-align: center;
     background: #ebebeb;
-    top: 230px;
+    top: 200px;
     left: 165px;
     border: none;
     font-size: 15px;
@@ -139,9 +148,125 @@ button[name="signin"] {
     font-weight: 500;
 }
 
-    button[name="signin"] > a {
-        color: gray;
-    }
-    button[name="signin"]:hover {
-        background: #bdbaba;
-    }
+button[name="signin"] > a {
+    color: gray;
+}
+
+button[name="signin"]:hover {
+    background: #bdbaba;
+}
+
+.slide{
+    width: 700px;
+    /*height: 100%;*/
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 100px;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+.mySlides img {
+    /*width: 300px;*/
+    height: 400px;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 1.2s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+    animation-name: example;
+    animation-duration: 2s;
+    animation-delay: 0.2s;
+    animation-fill-mode: backwards;
+    color: #fff;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 3px;
+    width: 100%;
+    text-align: center;
+    background: #a3a1a1;
+    opacity: 0.7;
+}
+
+@keyframes example {
+    from {opacity: 0;}
+    to {opacity: 0.7;}
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}

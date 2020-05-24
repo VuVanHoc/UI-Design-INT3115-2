@@ -1,7 +1,7 @@
 package com.uet.int3315.nhom8.license_test_system.model.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.uet.k62.web.system.examination.utils.Constant;
+import com.uet.int3315.nhom8.license_test_system.utils.Constant;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 

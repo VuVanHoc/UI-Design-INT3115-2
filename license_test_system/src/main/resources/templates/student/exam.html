@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <title>Đề thi</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto:400,500,700&display=swap"
+          rel="stylesheet">
+    <link th:href="@{~/CSS/Layout.css}" rel="stylesheet"/>
+    <link th:href="@{~/CSS/exam.css}" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div th:insert="header::header">
+</div>
+<div class="title-exam">
+    ĐỀ THI
+</div>
+<div class="space"></div>
+<div class="content-exam">
+    <div class="left-column">
+        <div class="list-question-title">
+            <h3><a class="btn-submit" href="/student/dashboard"><i class="fa fa-home"></i> Trang chủ</a></h3>
+            <br>
+            <p>Câu hỏi</p>
+        </div>
+        <div class="list-icon-question"></div>
+
+        <div class="result" style="display: none;">
+            <h3>Kết quả</h3>
+            <p>Số câu đúng: <span class="so-cau-dung"></span></p>
+            <p>Số câu sai: <span class="so-cau-sai"></span></p>
+            <p>Kết quả: <span class="ket-qua"></span></p>
+                    </div>
+    </div>
+    <div class="right-column">
+        <div class="topbar">
+            <div class="time-countdown"><p>Thời gian làm bài: <span id="time">00:00</span></p></div>
+            <div class="submit-exam"><input type="button" class="btn-submit" value="Nộp bài"/></div>
+        </div>
+
+        <div class="list-question">
+
+        </div>
+    </div>
+    <!--overlay image-->
+    <div id="overlay">
+    </div>
+</div>
+<input id="courseId" type="hidden" th:value="${courseId}"/>
+<script th:src="@{~/JS/jquery-3.4.1.min.js}"></script>
+<script th:src="@{~/JS/Layout.js}"></script>
+<script th:src="@{~/JS/student/exam.js}"></script>
+</body>
+</html>

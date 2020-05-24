@@ -1,4 +1,8 @@
-﻿
+﻿/*CSS cho phần bài thi của học viên*/
+    /*
+    Merge từ dev_huy
+    */
+
 * {
     margin: 0;
     padding: 0;
@@ -12,6 +16,7 @@ html, body {
 
 a {
     text-decoration: none;
+    color: #212121;
 }
 
 .clear-fix:after {
@@ -20,6 +25,7 @@ a {
     display: block;
     clear: both;
 }
+
 .header {
     position: absolute;
     top: 0;
@@ -29,14 +35,14 @@ a {
     background: #026b97;
 }
 
-    .header .header-left {
-        height: 100%;
-        width: 30px;
-        float: left;
-        text-align: center;
-        line-height: 60px;
-        margin-left: 20px;
-    }
+.header .header-left {
+    height: 100%;
+    width: 30px;
+    float: left;
+    text-align: center;
+    line-height: 60px;
+    margin-left: 20px;
+}
 
 .header-left > span {
     font-size: 20px;
@@ -57,74 +63,311 @@ a {
     text-align: center;
 }
 
-    .menu-header-right-item > span {
-        color: #fff;
-        font-size: 20px;
-    }
+.menu-header-right-item > span {
+    color: #fff;
+    font-size: 20px;
+}
+
 .title-exam {
     position: absolute;
     width: 100%;
     top: 60px;
     left: 0;
-    height: 80px;
-    line-height: 80px;
-    font-size: 26px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
     color: #026b97;
     text-align: center;
 }
+
 .space {
     position: absolute;
-    top: 130px;
+    top: 92px;
     height: 2px;
-    width: 100px;
-    left: calc(50% - 50px);
+    width: 50px;
+    left: calc(50% - 25px);
     background: #026b97;
 }
+
 .content-exam {
     position: absolute;
-    top: 140px;
+    top: 100px;
     display: flex;
     left: 0;
     bottom: 0;
     right: 0;
     background: #f7f9f9;
 }
-    .content-exam .list-icon-question {
-        width: 260px;
-        height: 100%;
-        border-right: 1px solid #d1dbf7;
+
+.content-exam .left-column {
+    width: 260px;
+    height: 100%;
+    border-right: 1px solid #d1dbf7;
+}
+
+.left-column .list-question-title {
+    margin-top: 15px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.left-column .list-icon-question {
+
+}
+
+.list-icon-question .row {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.row > a {
+    text-align: center;
+    padding-top: 7px;
+    display: inline-block;
+    height: 35px;
+    width: 35px;
+    border-radius: 5px;
+    background: #d1dbf7;
+    border-style: solid;
+    border-color: #026b97;
+    margin: 0px 5px;
+    cursor: pointer;
+}
+
+div.row > a.dang-lam {
+    background: #f9ac3e;
+    border-color: #026b97;
+    outline: none;
+    box-shadow: 0px 0px 10px #026b97;
+}
+
+div.row > a.da-lam{
+    background: #42ae64;
+}
+
+div.row > a.cau-sai{
+    background: #fd0000;
+}
+div.row > a.cau-dung{
+    background: #00fa40;
+}
+
+.content-exam .right-column {
+    flex-grow: 1;
+    height: 100%;
+    overflow: auto;
+    width: 525px;
+}
+
+.right-column .topbar {
+    position: sticky;
+    top: 15px;
+    height: 40px;
+    background: #c9dad5;
+    margin: 15px;
+}
+
+.right-column .list-question {
+
+}
+
+.topbar .time-countdown {
+    padding: 9px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#time {
+    font-size: 18px;
+    color: #026b97;
+}
+
+.topbar .submit-exam {
+    position: absolute;
+    right: 10px;
+    top: 3px;
+}
+
+.btn-submit {
+    height: 34px;
+    width: 70px;
+    background: #026b97;
+    color: #fff;
+    border: none;
+}
+
+.btn-submit:active {
+    background: #fff;
+    color: #026b97;
+    border: 1px solid;
+    border-color: #026b97;
+}
+
+.list-question .question {
+    width: 100%;
+    margin: 15px 0;
+    display: list-item;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.question-title {
+    font-weight: bold;
+    font-size: 16px;
+    color: #0062b5;
+    /*padding: 15px;*/
+
+}
+
+.question-content {
+    font-weight: bold;
+}
+
+.question-content .question-image {
+    display: block;
+    /*height: 300px;*/
+    /*width: 600px;*/
+    max-width:100%; height:auto;
+    text-align: center;
+}
+
+.answer-content {
+    width: 70%;
+    line-height: 2;
+    margin-top: 5px ;
+    display: grid;
+}
+
+.answer-content input {
+    border: 2px solid #026b97;
+}
+
+.answer-content input:hover {
+    box-shadow: 0px 0px 10px #026b97;
+}
+
+.answer-content input[type=text] {
+    width: 25%;
+    padding: 5px 5px;
+    margin: 10px 5px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.answer-content input[type=checkbox], input[type=radio]{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    width: 16px;
+    height: 16px;
+
+    transition: 0.2s all linear;
+    margin-right: 5px;
+
+    position: relative;
+    top: 2px;
+    cursor: pointer;
+    outline: none;
+}
+
+.answer-content input[type=checkbox] {
+
+}
+
+.answer-content input[type=checkbox]:checked:after {
+    content: '✓';
+    font-weight: bold;
+    position: relative;
+    bottom: 3px;
+    line-height: 16px;
+    color: #026b97;
+    /*display: inline-block;*/
+    text-align: center;
+}
+
+.answer-content input[type=radio] {
+    border-radius: 50%;
+}
+
+.answer-content input[type=radio]:checked {
+    border: 6px solid #026b97;
+}
+
+.finish {
+    animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
     }
-        .list-icon-question .row {
-            width: 100%;
-            height: 50px;
-            margin: 10px 0px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-            div.row > button {
-                display: inline-block;
-                height: 35px;
-                width: 35px;
-                border-radius: 5px;
-                background: #d1dbf7;
-                border: none;
-                box-shadow: 1px 1px 2px rgba(0,0,0,0.4);
-                margin: 0px 5px;
-                cursor: pointer;
-            }
-             div.row > button:focus {
-                 background: #f9ac3e;
-                 outline: none;
-             }
-    .content-exam .list-question {
-        flex-grow: 1;
-        height: 100%;
-        overflow: auto;
-    }
-        .list-question .question {
-            height: 250px !important;
-            width: 100%;
-            margin: 5px 0;
-            display: flex;
-        }
+}
+
+.result p{
+    margin: 10px 25px;
+}
+
+.result h3{
+    margin: 15px;
+    text-align: center;
+}
+
+.so-cau-dung{
+    color: #0d950c;
+    font-weight: bold;
+}
+
+.so-cau-sai{
+    color: #e12828;
+    font-weight: bold;
+}
+
+.so-cau-chua-lam{
+    font-weight: bold;
+}
+
+.ket-qua{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.dat{
+    color: #0d950c;
+}
+
+.khong-dat{
+    color: #e12828;
+}
+
+/*zoom image*/
+#overlay{
+    position: fixed;
+    top: 15%;
+    left: 25%;
+    width:50%;
+    height: 70%;
+    background: rgba(0,0,0,0.8) none 50% / contain no-repeat;
+    cursor: pointer;
+    transition: 0.3s;
+
+    visibility: hidden;
+    opacity: 0;
+}
+#overlay.open {
+    visibility: visible;
+    opacity: 1;
+}
+
+#overlay:after { /* X button icon */
+    content: "\2715";
+    position: absolute;
+    color: #fff;
+    top: 10px;
+    right: 20px;
+    font-size: 2em;
+}

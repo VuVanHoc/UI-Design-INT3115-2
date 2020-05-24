@@ -1,8 +1,9 @@
 package com.uet.int3315.nhom8.license_test_system.restcontroller;
 
-import com.uet.k62.web.system.examination.model.RestBody;
-import com.uet.k62.web.system.examination.model.dtos.QuestionRequestDTO;
-import com.uet.k62.web.system.examination.service.QuestionService;
+
+import com.uet.int3315.nhom8.license_test_system.model.RestBody;
+import com.uet.int3315.nhom8.license_test_system.model.dtos.QuestionRequestDTO;
+import com.uet.int3315.nhom8.license_test_system.service.QuestionService;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
