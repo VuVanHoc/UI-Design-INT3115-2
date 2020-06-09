@@ -146,14 +146,17 @@ div.row > a.dang-lam {
 }
 
 div.row > a.da-lam{
-    background: #42ae64;
+    background: #47A447;
+	color: #fff;
 }
 
 div.row > a.cau-sai{
-    background: #fd0000;
+    background: #D2322D;
+	color: #fff;
 }
 div.row > a.cau-dung{
-    background: #00fa40;
+    background: #47A447;
+	color: #fff;
 }
 
 .content-exam .right-column {
@@ -198,6 +201,7 @@ div.row > a.cau-dung{
     background: #026b97;
     color: #fff;
     border: none;
+	cursor: pointer;
 }
 
 .btn-submit:active {
@@ -205,6 +209,7 @@ div.row > a.cau-dung{
     color: #026b97;
     border: 1px solid;
     border-color: #026b97;
+	outline: none;
 }
 
 .list-question .question {

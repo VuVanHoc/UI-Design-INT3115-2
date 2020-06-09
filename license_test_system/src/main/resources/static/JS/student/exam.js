@@ -200,7 +200,7 @@ function loadQuestions(totalQuestions) {
     let i;
     for (i = 0; i < totalQuestions; i++) {
         let data_question = getData(API_URL + "/api/questions/".concat(array_question_id[i]));
-        $('.list-question').append('<div id="question_' + (i + 1) + '" class="question" style="display: none;" question-type="' + data_question.questionTypeCode + '"><p class="question-title">Câu ' + (i + 1) + ':</p></div>')
+        $('.list-question').append('<div id="question_' + (i + 1) + '" class="question" style="display: none;" question-type="' + data_question.questionTypeCode + '"><p class="question-title">Câu hỏi ' + (i + 1) + ':</p></div>')
 
         //Nội dung câu hỏi
         $('#question_' + (i + 1)).append("<div class='question-content'></div>")

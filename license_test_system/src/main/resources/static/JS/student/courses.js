@@ -52,7 +52,7 @@ function loadCourses() {
         rowhtml.append('<td class="">' + courseType.minScore + '</td>');
 
         let exam_url = path1.concat(item.id, path2);
-        rowhtml.append('<td class=""><a href="'+ exam_url +'">Xem chi tiết</a></td>');
+        rowhtml.append('<td class=""><a href="'+ exam_url +'">Vào thi</a></td>');
         $('.list-courses tbody').append(rowhtml);
     })
 

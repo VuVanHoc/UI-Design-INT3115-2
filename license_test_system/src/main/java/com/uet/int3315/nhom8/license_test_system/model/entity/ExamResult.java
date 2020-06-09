@@ -4,9 +4,10 @@ import lombok.Data;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Table;
 
 @Data
-@Entity(name = "exam_result_update")
+@Entity(name = "exam_result")
 public class ExamResult extends BaseEntity {
 
 	@Column(name = "user_id")

@@ -21,8 +21,8 @@ a {
     right: 0;
     height: 80px;
     width: 100%;
-    border-bottom: 1px solid #9e9c9c;
-    background: #026b97;
+    /*border-bottom: 1px solid #9e9c9c;*/
+    /*background: #026b97;*/
 }
 #header #logo {
     width: 160px;
