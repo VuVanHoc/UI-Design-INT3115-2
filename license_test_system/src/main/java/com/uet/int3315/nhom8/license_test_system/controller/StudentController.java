@@ -17,30 +17,40 @@ public class StudentController {
 		return "Signin";
 	}
 	
+	@GetMapping(value = {"/signup"})
+	public String signUp() {
+		return "SignUp";
+	}
+	
+	@GetMapping(value = {"/forgotPW"})
+	public String forgotPW() {
+		return "ForgotPW";
+	}
+	
 	@GetMapping(value = "/student/dashboard")
-	public String showDashboard(){
+	public String showDashboard() {
 		return "student/dashboard";
 	}
-
+	
 	@GetMapping(value = "/student/courses")
-	public String showCourses(){
+	public String showCourses() {
 		return "student/courses";
 	}
-
+	
 	@GetMapping(value = "/student/courses/{courseId}/examDetail")
-	public String showExamDetail(Model model, @PathVariable Integer courseId){
+	public String showExamDetail(Model model, @PathVariable Integer courseId) {
 		model.addAttribute("courseId", courseId);
 		return "student/examDetail";
 	}
-
+	
 	@GetMapping(value = "/student/courses/{courseId}/exam")
-	public String showExam(Model model, @PathVariable Integer courseId){
+	public String showExam(Model model, @PathVariable Integer courseId) {
 		model.addAttribute("courseId", courseId);
 		return "student/exam";
 	}
-
+	
 	@GetMapping(value = "/student/history")
-	public String showHistory(){
+	public String showHistory() {
 		return "student/history";
 	}
 

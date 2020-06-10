@@ -29,9 +29,13 @@
 </body>-->
 <body>
 <div class="container">
-	<h1>Đăng nhập</h1>
+	<h1>Đăng ký tài khoản</h1>
 	<div class="form">
 		<form id="signin" method="post" action="/authenticate" class="form-content">
+			<p class="label-input">Họ và tên</p>
+			<i class="fa fa-user icon"></i>
+			<input type="text" name="fullname" id="fullname" placeholder="Nhập họ tên"/>
+			<hr/>
 			<p class="label-input">Email</p>
 			<i class="fa fa-envelope icon"></i>
 			<input type="email" name="username" id="username" placeholder="Nhập email"/>
@@ -40,19 +44,18 @@
 			<i class="fa fa-lock icon"></i>
 			<input type="password" name="password" id="password" placeholder="Nhập mật khẩu"/>
 			<hr>
+			<p class="label-input" style="margin-top: 10px">Xác nhận mật khẩu</p>
+			<i class="fa fa-lock icon"></i>
+			<input type="password" name="cfpassword" id="cfpassword" placeholder="Xác nhận mật khẩu"/>
+			<hr>
 			<br>
-			<div class="d-flex-center ">
-				<div style="display: flex; align-items: center">
-					<input type="checkbox"> <span>Nhớ tài khoản</span>
-				</div>
-				<a class="forgot-password" href="/forgotPW">Quên mật khẩu?</a>
-			</div>
+			
 			<div style="margin-top: 5px">
-				<button name="signin" id="submit" class="btn btn-primary">Đăng nhập</button>
+				<button name="signin" id="submit" class="btn btn-primary">Đăng ký</button>
 			</div>
 		</form>
 		<br>
-		<p>Bạn chưa có tài khoản?<a href="/signup" class="signUpNow"> Đăng ký ngay</a></p>
+		<p>Bạn đã có tài khoản?<a href="/login" class="signUpNow"> Đăng nhập</a></p>
 	</div>
 
 </div>
