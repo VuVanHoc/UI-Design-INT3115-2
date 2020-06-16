@@ -2,10 +2,10 @@
 -- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
--- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th6 16, 2020 lúc 05:08 PM
--- Phiên bản máy phục vụ: 10.1.38-MariaDB
--- Phiên bản PHP: 7.3.2
+-- Host: 127.0.0.1
+-- Generation Time: Dec 01, 2019 at 04:33 PM
+-- Server version: 10.1.38-MariaDB
+-- PHP Version: 7.3.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `thibanglaixe`
+-- Database: `thibanglaixe`
 --
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `answer`
+-- Table structure for table `answer`
 --
 
 CREATE TABLE `answer` (
@@ -39,7 +39,7 @@ CREATE TABLE `answer` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `answer`
+-- Dumping data for table `answer`
 --
 
 INSERT INTO `answer` (`id`, `question_id`, `content`, `status`, `created_time`, `updated_time`, `deleted`) VALUES
@@ -212,7 +212,7 @@ INSERT INTO `answer` (`id`, `question_id`, `content`, `status`, `created_time`, 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `course`
+-- Table structure for table `course`
 --
 
 CREATE TABLE `course` (
@@ -225,7 +225,7 @@ CREATE TABLE `course` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `course`
+-- Dumping data for table `course`
 --
 
 INSERT INTO `course` (`id`, `type_id`, `course_name`, `created_time`, `updated_time`, `deleted`) VALUES
@@ -236,7 +236,7 @@ INSERT INTO `course` (`id`, `type_id`, `course_name`, `created_time`, `updated_t
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `course_type`
+-- Table structure for table `course_type`
 --
 
 CREATE TABLE `course_type` (
@@ -251,7 +251,7 @@ CREATE TABLE `course_type` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `course_type`
+-- Dumping data for table `course_type`
 --
 
 INSERT INTO `course_type` (`id`, `name`, `created_time`, `updated_time`, `description`, `min_score`, `number_question`, `deleted`) VALUES
@@ -261,125 +261,7 @@ INSERT INTO `course_type` (`id`, `name`, `created_time`, `updated_time`, `descri
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `course_user`
---
-
-CREATE TABLE `course_user` (
-  `id` int(11) NOT NULL,
-  `created_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `updated_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `deleted` tinyint(1) NOT NULL DEFAULT '1',
-  `course_id` int(11) NOT NULL,
-  `user_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Đang đổ dữ liệu cho bảng `course_user`
---
-
-INSERT INTO `course_user` (`id`, `created_time`, `updated_time`, `deleted`, `course_id`, `user_id`) VALUES
-(1, '2020-06-07 23:30:13', '2020-06-07 23:30:13', 1, 4, 8),
-(2, '2020-06-07 23:30:13', '2020-06-07 23:30:13', 1, 4, 7),
-(3, '2020-06-07 23:39:16', '2020-06-07 23:39:16', 1, 3, 7);
-
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `exam_question`
---
-
-CREATE TABLE `exam_question` (
-  `id` int(11) NOT NULL,
-  `created_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `updated_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `deleted` tinyint(1) NOT NULL DEFAULT '1',
-  `exam_id` int(11) NOT NULL,
-  `question_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Đang đổ dữ liệu cho bảng `exam_question`
---
-
-INSERT INTO `exam_question` (`id`, `created_time`, `updated_time`, `deleted`, `exam_id`, `question_id`) VALUES
-(1, '2020-06-07 23:33:38', '2020-06-07 23:33:38', 1, 2, 34),
-(2, '2020-06-07 23:33:38', '2020-06-07 23:33:38', 1, 2, 62),
-(3, '2020-06-07 23:33:38', '2020-06-07 23:33:38', 1, 2, 17),
-(4, '2020-06-07 23:33:38', '2020-06-07 23:33:38', 1, 2, 33),
-(5, '2020-06-07 23:33:38', '2020-06-07 23:33:38', 1, 2, 50),
-(6, '2020-06-07 23:33:38', '2020-06-07 23:33:38', 1, 2, 18),
-(7, '2020-06-07 23:33:38', '2020-06-07 23:33:38', 1, 2, 54),
-(8, '2020-06-07 23:33:38', '2020-06-07 23:33:38', 1, 2, 26),
-(9, '2020-06-07 23:33:38', '2020-06-07 23:33:38', 1, 2, 37),
-(10, '2020-06-07 23:33:38', '2020-06-07 23:33:38', 1, 2, 20),
-(11, '2020-06-07 23:33:38', '2020-06-07 23:33:38', 1, 2, 58),
-(12, '2020-06-07 23:33:38', '2020-06-07 23:33:38', 1, 2, 53),
-(13, '2020-06-07 23:33:38', '2020-06-07 23:33:38', 1, 2, 46),
-(14, '2020-06-07 23:33:38', '2020-06-07 23:33:38', 1, 2, 56),
-(15, '2020-06-07 23:33:38', '2020-06-07 23:33:38', 1, 2, 22),
-(16, '2020-06-07 23:33:38', '2020-06-07 23:33:38', 1, 2, 64),
-(17, '2020-06-07 23:33:38', '2020-06-07 23:33:38', 1, 2, 49),
-(18, '2020-06-07 23:33:38', '2020-06-07 23:33:38', 1, 2, 16),
-(19, '2020-06-07 23:33:38', '2020-06-07 23:33:38', 1, 2, 24),
-(20, '2020-06-07 23:33:38', '2020-06-07 23:33:38', 1, 2, 31),
-(21, '2020-06-07 23:33:38', '2020-06-07 23:33:38', 1, 2, 47),
-(22, '2020-06-07 23:33:38', '2020-06-07 23:33:38', 1, 2, 55),
-(23, '2020-06-07 23:33:38', '2020-06-07 23:33:38', 1, 2, 45),
-(24, '2020-06-07 23:33:38', '2020-06-07 23:33:38', 1, 2, 52),
-(25, '2020-06-07 23:33:38', '2020-06-07 23:33:38', 1, 2, 42),
-(26, '2020-06-07 23:33:38', '2020-06-07 23:33:38', 1, 2, 27),
-(27, '2020-06-07 23:33:38', '2020-06-07 23:33:38', 1, 2, 48),
-(28, '2020-06-07 23:33:38', '2020-06-07 23:33:38', 1, 2, 36),
-(29, '2020-06-07 23:33:38', '2020-06-07 23:33:38', 1, 2, 60),
-(30, '2020-06-07 23:33:38', '2020-06-07 23:33:38', 1, 2, 19);
-
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `exam_result`
---
-
-CREATE TABLE `exam_result` (
-  `id` int(11) NOT NULL,
-  `user_id` int(11) NOT NULL,
-  `course_id` int(11) NOT NULL,
-  `score` int(11) NOT NULL,
-  `status` tinyint(1) NOT NULL,
-  `created_time` datetime NOT NULL,
-  `updated_time` datetime NOT NULL,
-  `deleted` tinyint(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Đang đổ dữ liệu cho bảng `exam_result`
---
-
-INSERT INTO `exam_result` (`id`, `user_id`, `course_id`, `score`, `status`, `created_time`, `updated_time`, `deleted`) VALUES
-(1, 7, 4, 30, 1, '2020-06-07 23:38:16', '2020-06-07 23:38:16', 0),
-(2, 7, 4, 60, 1, '2020-06-07 23:38:22', '2020-06-07 23:38:22', 0),
-(3, 7, 4, 30, 1, '2020-06-07 23:38:27', '2020-06-07 23:38:27', 0),
-(4, 7, 3, 0, 0, '2020-06-07 23:40:00', '2020-06-07 23:40:00', 0),
-(5, 7, 3, 16, 0, '2020-06-09 22:02:24', '2020-06-09 22:02:24', 0),
-(6, 7, 3, 0, 0, '2020-06-09 23:32:58', '2020-06-09 23:32:58', 0),
-(7, 7, 3, 0, 0, '2020-06-09 23:44:34', '2020-06-09 23:44:34', 0),
-(8, 7, 3, 2, 0, '2020-06-09 23:48:59', '2020-06-09 23:48:59', 0),
-(9, 7, 3, 2, 0, '2020-06-09 23:51:25', '2020-06-09 23:51:25', 0),
-(10, 7, 3, 0, 0, '2020-06-09 23:53:09', '2020-06-09 23:53:09', 0),
-(11, 7, 4, 30, 1, '2020-06-10 00:01:29', '2020-06-10 00:01:29', 0),
-(12, 7, 4, 60, 1, '2020-06-10 00:01:37', '2020-06-10 00:01:37', 0),
-(13, 7, 3, 0, 0, '2020-06-10 00:02:20', '2020-06-10 00:02:20', 0),
-(14, 7, 3, 2, 0, '2020-06-10 00:03:22', '2020-06-10 00:03:22', 0),
-(15, 7, 3, 0, 0, '2020-06-10 00:04:25', '2020-06-10 00:04:25', 0),
-(16, 7, 3, 0, 0, '2020-06-10 00:05:59', '2020-06-10 00:05:59', 0),
-(17, 7, 3, 0, 0, '2020-06-10 00:11:27', '2020-06-10 00:11:27', 0),
-(18, 7, 3, 0, 0, '2020-06-10 21:33:05', '2020-06-10 21:33:05', 0),
-(19, 7, 3, 0, 0, '2020-06-16 21:58:58', '2020-06-16 21:58:58', 0),
-(20, 7, 3, 1, 0, '2020-06-16 21:59:52', '2020-06-16 21:59:52', 0);
-
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `exam_schedule`
+-- Table structure for table `exam_schedule`
 --
 
 CREATE TABLE `exam_schedule` (
@@ -394,18 +276,18 @@ CREATE TABLE `exam_schedule` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `exam_schedule`
+-- Dumping data for table `exam_schedule`
 --
 
 INSERT INTO `exam_schedule` (`id`, `course_id`, `start_time`, `end_time`, `note`, `created_time`, `updated_time`, `deleted`) VALUES
-(2, 3, '2019-11-01 07:00:00', '2019-11-01 07:20:00', '', '2019-10-30 16:07:14', '2020-06-07 16:33:37', 0),
+(2, 3, '2019-11-01 07:00:00', '2019-11-01 07:20:00', '', '2019-10-30 16:07:14', '2019-11-26 06:16:32', 0),
 (3, 4, '2019-11-23 21:06:00', '2019-11-23 20:34:00', '', '2019-11-24 09:10:31', '2019-11-24 09:10:31', 0),
 (4, 5, '2019-11-26 10:15:00', '2019-11-26 10:45:00', '', '2019-11-26 10:13:53', '2019-11-26 10:13:53', 0);
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `log_history`
+-- Table structure for table `log_history`
 --
 
 CREATE TABLE `log_history` (
@@ -420,7 +302,7 @@ CREATE TABLE `log_history` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `question`
+-- Table structure for table `question`
 --
 
 CREATE TABLE `question` (
@@ -434,7 +316,7 @@ CREATE TABLE `question` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `question`
+-- Dumping data for table `question`
 --
 
 INSERT INTO `question` (`id`, `question_type`, `content`, `created_time`, `updated_time`, `image_url`, `deleted`) VALUES
@@ -498,7 +380,7 @@ INSERT INTO `question` (`id`, `question_type`, `content`, `created_time`, `updat
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `question_type`
+-- Table structure for table `question_type`
 --
 
 CREATE TABLE `question_type` (
@@ -511,7 +393,7 @@ CREATE TABLE `question_type` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `question_type`
+-- Dumping data for table `question_type`
 --
 
 INSERT INTO `question_type` (`id`, `code`, `description`, `created_time`, `updated_time`, `deleted`) VALUES
@@ -523,7 +405,7 @@ INSERT INTO `question_type` (`id`, `code`, `description`, `created_time`, `updat
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `role`
+-- Table structure for table `role`
 --
 
 CREATE TABLE `role` (
@@ -536,7 +418,7 @@ CREATE TABLE `role` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `role`
+-- Dumping data for table `role`
 --
 
 INSERT INTO `role` (`id`, `name`, `created_time`, `updated_time`, `description`, `deleted`) VALUES
@@ -547,7 +429,7 @@ INSERT INTO `role` (`id`, `name`, `created_time`, `updated_time`, `description`,
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `user`
+-- Table structure for table `user`
 --
 
 CREATE TABLE `user` (
@@ -566,202 +448,165 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `user`
+-- Dumping data for table `user`
 --
 
 INSERT INTO `user` (`id`, `role_id`, `username`, `password`, `full_name`, `email`, `phone`, `birthday`, `picture`, `created_time`, `updated_time`, `deleted`) VALUES
 (3, 1, 'admin@demo.com', '$2a$10$StOdejmj7ifcKygSkuYJ2eUAVrad..pYp0oq5hoQ2UvtMLm3Gndsa', 'Admin', 'admin@demo.com', '212324215215', '1999-12-06', NULL, '2019-11-26 09:39:05', '2019-11-26 09:39:05', 0),
-(7, 4, 'hoc@gmail.com', '$2a$10$OInZCg/LqfmLx0xpW4jG8.uxbwcIQskETOooieVT5MR.VWjRCm1bq', 'Vũ Văn Học', 'hoc@gmail.com', '343847478', NULL, NULL, '2019-11-24 09:14:47', '2019-11-24 09:14:47', 1),
-(8, 4, 'huy@gmail.com', '$2a$10$wOWZeU7T5jDv5ECpdd0T9.0QkgFZqjUHMZZOW4p8nn5g45.huxaxq', 'Ngô Đức Huy', 'huy@gmail.com', '0123123123', NULL, NULL, '2019-11-24 15:04:45', '2019-11-24 15:04:45', 0),
-(9, 4, 'hoang@gmail.com.vn', '$2a$10$4.wyAU5.VSCQhJ/blh0TCOIhOFfWlDFXKr.CRAmXrSbRRerWVXn2e', 'Vũ Văn Học', 'hoang@gmail.com.vn', '343847478', NULL, NULL, '2020-06-09 16:28:38', '2020-06-09 16:28:38', 0);
+(7, 4, 'hoc@gmail.com', '$2a$10$OInZCg/LqfmLx0xpW4jG8.uxbwcIQskETOooieVT5MR.VWjRCm1bq', 'Vũ Văn Học', 'hoc@gmail.com', '343847478', NULL, NULL, '2019-11-24 09:14:47', '2019-11-24 09:14:47', 0),
+(8, 4, 'huy@gmail.com', '$2a$10$wOWZeU7T5jDv5ECpdd0T9.0QkgFZqjUHMZZOW4p8nn5g45.huxaxq', 'Ngô Đức Huy', 'huy@gmail.com', '0123123123', NULL, NULL, '2019-11-24 15:04:45', '2019-11-24 15:04:45', 0);
 
 --
--- Chỉ mục cho các bảng đã đổ
+-- Indexes for dumped tables
 --
 
 --
--- Chỉ mục cho bảng `answer`
+-- Indexes for table `answer`
 --
 ALTER TABLE `answer`
   ADD PRIMARY KEY (`id`),
   ADD KEY `question_id` (`question_id`);
 
 --
--- Chỉ mục cho bảng `course`
+-- Indexes for table `course`
 --
 ALTER TABLE `course`
   ADD PRIMARY KEY (`id`),
   ADD KEY `type_id` (`type_id`);
 
 --
--- Chỉ mục cho bảng `course_type`
+-- Indexes for table `course_type`
 --
 ALTER TABLE `course_type`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `course_user`
---
-ALTER TABLE `course_user`
-  ADD PRIMARY KEY (`id`);
-
---
--- Chỉ mục cho bảng `exam_question`
---
-ALTER TABLE `exam_question`
-  ADD PRIMARY KEY (`id`);
-
---
--- Chỉ mục cho bảng `exam_result`
---
-ALTER TABLE `exam_result`
-  ADD PRIMARY KEY (`id`);
-
---
--- Chỉ mục cho bảng `exam_schedule`
+-- Indexes for table `exam_schedule`
 --
 ALTER TABLE `exam_schedule`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `log_history`
+-- Indexes for table `log_history`
 --
 ALTER TABLE `log_history`
   ADD PRIMARY KEY (`id`),
   ADD KEY `user_id` (`user_id`);
 
 --
--- Chỉ mục cho bảng `question`
+-- Indexes for table `question`
 --
 ALTER TABLE `question`
   ADD PRIMARY KEY (`id`),
   ADD KEY `question_type` (`question_type`);
 
 --
--- Chỉ mục cho bảng `question_type`
+-- Indexes for table `question_type`
 --
 ALTER TABLE `question_type`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `role`
+-- Indexes for table `role`
 --
 ALTER TABLE `role`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `user`
+-- Indexes for table `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`id`),
   ADD KEY `role_id` (`role_id`);
 
 --
--- AUTO_INCREMENT cho các bảng đã đổ
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT cho bảng `answer`
+-- AUTO_INCREMENT for table `answer`
 --
 ALTER TABLE `answer`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=182;
 
 --
--- AUTO_INCREMENT cho bảng `course`
+-- AUTO_INCREMENT for table `course`
 --
 ALTER TABLE `course`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT cho bảng `course_type`
+-- AUTO_INCREMENT for table `course_type`
 --
 ALTER TABLE `course_type`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT cho bảng `course_user`
---
-ALTER TABLE `course_user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT cho bảng `exam_question`
---
-ALTER TABLE `exam_question`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
-
---
--- AUTO_INCREMENT cho bảng `exam_result`
---
-ALTER TABLE `exam_result`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
-
---
--- AUTO_INCREMENT cho bảng `exam_schedule`
+-- AUTO_INCREMENT for table `exam_schedule`
 --
 ALTER TABLE `exam_schedule`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT cho bảng `log_history`
+-- AUTO_INCREMENT for table `log_history`
 --
 ALTER TABLE `log_history`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `question`
+-- AUTO_INCREMENT for table `question`
 --
 ALTER TABLE `question`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
 
 --
--- AUTO_INCREMENT cho bảng `question_type`
+-- AUTO_INCREMENT for table `question_type`
 --
 ALTER TABLE `question_type`
   MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT cho bảng `role`
+-- AUTO_INCREMENT for table `role`
 --
 ALTER TABLE `role`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT cho bảng `user`
+-- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- Các ràng buộc cho các bảng đã đổ
+-- Constraints for dumped tables
 --
 
 --
--- Các ràng buộc cho bảng `answer`
+-- Constraints for table `answer`
 --
 ALTER TABLE `answer`
   ADD CONSTRAINT `fk_answer_question` FOREIGN KEY (`question_id`) REFERENCES `question` (`id`) ON DELETE CASCADE;
 
 --
--- Các ràng buộc cho bảng `course`
+-- Constraints for table `course`
 --
 ALTER TABLE `course`
   ADD CONSTRAINT `course_ibfk_2` FOREIGN KEY (`type_id`) REFERENCES `course_type` (`id`);
 
 --
--- Các ràng buộc cho bảng `log_history`
+-- Constraints for table `log_history`
 --
 ALTER TABLE `log_history`
   ADD CONSTRAINT `log_history_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`);
 
 --
--- Các ràng buộc cho bảng `question`
+-- Constraints for table `question`
 --
 ALTER TABLE `question`
   ADD CONSTRAINT `fk_question_question_type` FOREIGN KEY (`question_type`) REFERENCES `question_type` (`id`);
 
 --
--- Các ràng buộc cho bảng `user`
+-- Constraints for table `user`
 --
 ALTER TABLE `user`
   ADD CONSTRAINT `user_ibfk_1` FOREIGN KEY (`role_id`) REFERENCES `role` (`id`);
